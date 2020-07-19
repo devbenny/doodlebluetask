@@ -1,38 +1,303 @@
-.App {
-  text-align: center;
+body{
+
+}
+.sidebar{
+  width: 70px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background:linear-gradient(180deg,#ff7c6b,#fc2ca0);
+  box-shadow:0 14px 0px 0 rgba(53,64,82,.07);
+  overflow-x: hidden;
+  z-index: 1000;
+}
+.header{
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow:0 0 14px 0 rgba(53,64,82,.07);
+  padding-left: 70px;
+  z-index: 100;
+}
+.content{
+  width: auto;
+  height: auto;
+  margin: 70px 0 0 70px;
+}
+.remix {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+.nav-item{
+  padding:8px 0;
+}
+.header-searchbar .search-icon{
+  position: relative;
+  margin: 8px;
+  margin-left: 20px;
+  z-index: 1000;
+  padding: 2px;
+}
+.header-searchbar input{
+  width: 30px;
+  background-color: whitesmoke;
+  border: 0;
+  height: 30px;
+  border-radius: 15px;
+  text-indent: 1.8rem;
+  position: absolute;
+  left: 100px;
+  z-index: 0;
+}
+.header-searchbar input:hover{
+  width: 250px;
+  transition: all 0.5s ease;
+}
+.header-searchbar input:active{
+  width: 250px;
+  transition: all 0.5s ease;
+}
+.header-searchbar .search-icon:hover input{
+  width: 250px;
+  transition: all 0.5s ease;
+}
+.header-searchbar .search-icon:active input:active{
+  width: 250px;
+  transition: all 0.5s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text-whitesmoke{
+  color: #bcbcbc;
+}
+.text-gray{
+  color:gray;
+  font-weight: 600;
+}
+.Contacts-Table{
+  border: none;
+}
+.searchbar input{
+  width: 300px;
+  background-color: whitesmoke;
+  border: 0;
+  height: 45px;
+  border-radius: 20px;
+  text-indent: 15px;
+}
+.newBtn{
+  width: 150px;
+  border-radius:5px !important;
+  background: linear-gradient(90deg,#ff7c6b,#fc2ca0) !important;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
+}
+.newBtn:hover{
+  transition: 0.5s;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
+}
+.newBtn span{
+  padding: 0 0 2px 0 !important;
+}
+.searchbar span{
+ position: relative;
+ margin-left: -10%;
+}
+.Contacts-Table thead {
+  background-color: whitesmoke;
+  border: none;
+  color: gray;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.table td, .table th{
+  border: none !important;
+  font-weight: 500 !important;
+}
+.ImageText{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.8em;
+  height: 1.8em;
+  font-size: 1.8em;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 600;
+}
+.btn{
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+  font-size: 16px;
+}
+.btn:hover{
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+  font-size: 16px;
+}
+.btn:focus{
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+  font-size: 16px;
+}
+.btn:active{
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+  font-size: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/* Modal CSS */
+.modal-open {
+  overflow: hidden; }
+  .modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto; }
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  outline: 0; }
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 0.5rem;
+  pointer-events: none; }
+  .modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+    transform: translate(0, -25%); }
+    @media screen and (prefers-reduced-motion: reduce) {
+      .modal.fade .modal-dialog {
+        transition: none; } }
+  .modal.show .modal-dialog {
+    transform: translate(0,10%); }
+
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - (0.5rem * 2)); }
+  .modal-dialog-centered::before {
+    display: block;
+    height: calc(100vh - (0.5rem * 2));
+    content: ""; }
+
+.modal-content {
+  position: relative;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 0 solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.4375rem;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.17);
+  outline: 0; }
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000; }
+  .modal-backdrop.fade {
+    opacity: 0; }
+  .modal-backdrop.show {
+    opacity: 0.16; }
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.25rem;
+  border-bottom: 0 solid #e9ecef;
+  border-top-left-radius: 0.4375rem;
+  border-top-right-radius: 0.4375rem; }
+  .modal-header .close {
+    padding: 1.25rem;
+    margin: -1.25rem -1.25rem -1.25rem auto; }
+
+.modal-title {
+  margin-bottom: 0;
+  line-height: 1.1; }
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1.5rem; }
+
+.modal-footer {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  justify-content: flex-end;
+  padding: 1.5rem;
+  border-top: 0 solid #e9ecef; }
+  .modal-footer > :not(:first-child) {
+    margin-left: .25rem; }
+  .modal-footer > :not(:last-child) {
+    margin-right: .25rem; }
 
-.App-link {
-  color: #61dafb;
-}
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  @media (min-width: 576px) {
+    .modal-dialog {
+      max-width: 500px;
+      margin: 1.75rem auto; }
+    .modal-dialog-centered {
+      min-height: calc(100% - (1.75rem * 2)); }
+      .modal-dialog-centered::before {
+        height: calc(100vh - (1.75rem * 2)); }
+    .modal-content {
+      box-shadow: 0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.17); }
+    .modal-sm {
+      max-width: 380px; } }
+  
+  @media (min-width: 992px) {
+    .modal-lg {
+      max-width: 800px; } }
+  
+  
+      .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show > .btn-secondary.dropdown-toggle{
+        color:gray !important;
+        background-color: transparent;
+        border: none;
+      }
+      .btn-secondary.focus, .btn-secondary:focus{
+        box-shadow:none !important;
+      }
